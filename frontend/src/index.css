@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes snowFooter {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 600px; }
+}
+
+.animate-snow {
+  background-image: url("https://i.imgur.com/9N9Z9Hk.png");
+  background-size: contain;
+  animation: snowFooter 12s linear infinite;
+}
