@@ -66,7 +66,6 @@ const createTables = async () => {
         total_marks DECIMAL(5,2) NOT NULL,
         is_locked BOOLEAN DEFAULT TRUE,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         FOREIGN KEY (department_id) REFERENCES departments(id),
         FOREIGN KEY (evaluator_id) REFERENCES evaluators(id),
         UNIQUE KEY unique_eval (department_id, evaluator_id)
